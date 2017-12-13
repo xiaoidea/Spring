@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="brush" class="ioc1.M1Brush"> </bean>
+    <bean id="student" class="ioc1.M4Student" >
+        <property name="location" value="Beijing" /> <!-- 属性必须有get/set方法 -->
+        <property name="years">
+            <list>
+                <value>2016</value>
+                <value>2017</value>
+            </list>
+        </property>
+        <property name="brush" ref="brush" />
+        <constructor-arg name="name" value="hengyu.dai" />
+    </bean>
+</beans>
