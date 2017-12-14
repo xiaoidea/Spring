@@ -7,4 +7,5 @@
     <!-- 设置自动扫描的包路径 -->
     <context:component-scan base-package="autowire" />
 
+    <bean id="brush" class="ioc1.M1Brush" />
 </beans>
