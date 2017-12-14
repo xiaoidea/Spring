@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="demo5" class="inject.Demo5FromFactory">
+        <property name="brush" ref="beanfactory1"></property>
+        <property name="pen" ref="pen"></property>
+    </bean>
+
+    <bean id="beanfactory1" class="factory.BeanFactory1" factory-method="getBrush"></bean>
+
+    <bean id="beanfactory2" class="factory.BeanFactory2"></bean>
+    <bean id="pen" factory-bean="beanfactory2" factory-method="getPen"></bean>
+</beans>

@@ -1,5 +1,6 @@
 package autowire;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
@@ -7,6 +8,13 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class M3Grass {
+    public String getName() {
+        return name;
+    }
+
+    @Value("xiaocao")
+    private String name;
+
     public void growUp() {
         System.out.println("grass is growing up!");
     }

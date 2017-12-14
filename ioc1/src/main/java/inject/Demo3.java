@@ -8,5 +8,6 @@ public class Demo3 {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring/autowire.xml");
         M3Grass grass = context.getBean(M3Grass.class);
         grass.growUp();
+        System.out.println(grass.getName());
     }
 }
